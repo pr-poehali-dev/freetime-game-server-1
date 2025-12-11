@@ -1,0 +1,38 @@
+{
+  "tests": [
+    {
+      "name": "Generate token for privilege purchase",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "user_id": "123456789",
+        "telegram_username": "testuser",
+        "product_type": "privilege",
+        "product_name": "Аспид",
+        "amount_stars": 2,
+        "amount_rub": 2,
+        "minecraft_nickname": "TestPlayer"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true,
+        "token": "string",
+        "transaction_id": "number"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Missing required fields returns 400",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "user_id": "123456789"
+      },
+      "expectedStatus": 400,
+      "expectedBody": {
+        "error": "string"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

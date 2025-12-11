@@ -19,8 +19,15 @@ const Header = ({ theme, onThemeChange }: HeaderProps) => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60">
-      <div className="container flex h-16 items-center justify-between">
+    <>
+      <div className="w-full bg-primary text-primary-foreground py-2 text-center">
+        <a href="https://t.me/FreeTimeOffical" target="_blank" rel="noopener noreferrer" className="text-sm font-medium hover:opacity-80 transition-opacity flex items-center justify-center gap-2">
+          <Icon name="Send" size={16} />
+          Наш главный и основной ТГ Канал!
+        </a>
+      </div>
+      <header className="sticky top-0 z-50 w-full border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60">
+        <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-6">
           <h1 className="text-2xl font-display font-bold text-gradient">FreeTime</h1>
           <nav className="hidden md:flex items-center gap-6">
@@ -89,7 +96,8 @@ const Header = ({ theme, onThemeChange }: HeaderProps) => {
           </DropdownMenu>
         </div>
       </div>
-    </header>
+      </header>
+    </>
   );
 };
 

@@ -1,0 +1,25 @@
+{
+  "tests": [
+    {
+      "name": "Token not found returns 404",
+      "method": "GET",
+      "path": "/?token=invalid_token_123",
+      "expectedStatus": 404,
+      "expectedBody": {
+        "error": "Token not found",
+        "valid": false
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Missing token parameter returns 400",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 400,
+      "expectedBody": {
+        "error": "string"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

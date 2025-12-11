@@ -110,10 +110,35 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t pt-8 text-center">
-          <p className="text-sm text-muted-foreground">
-            © {currentYear} FreeTime Server. Все права защищены. Minecraft является товарным знаком Mojang AB.
-          </p>
+        <div className="border-t pt-8">
+          <div className="text-center space-y-3">
+            <p className="text-sm text-muted-foreground">
+              Сервер FreeTime никак не относится к Mojang AB.
+            </p>
+            <p className="text-xs text-muted-foreground">
+              ИП Станислав Карпов Михайлович<br />
+              ИНН: НИТ, ОГРНИП: НИТ
+            </p>
+            <p className="text-xs text-muted-foreground">
+              Копирование контента с сайта, серверов проекта запрещено.
+            </p>
+            <div className="flex items-center justify-center gap-4 text-xs">
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                Договор оферты
+              </a>
+              <span className="text-muted-foreground">|</span>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                Политика обработки персональных данных
+              </a>
+            </div>
+            <p className="text-sm text-muted-foreground pt-4">
+              © 2026 FreeTime.gomc.me<br />
+              Все Права Защищены
+            </p>
+            <p className="text-xs text-muted-foreground opacity-70">
+              кодер сайта Юра (<a href="https://poehali.dev" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">poehali.dev</a>)
+            </p>
+          </div>
         </div>
       </div>
     </footer>
